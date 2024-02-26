@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="1" name="oauth1-test_v1">
+    <Basepaths>/oauth1/v1</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1606251476733</CreatedAt>
+    <CreatedBy>cqaap5t</CreatedBy>
+    <Description></Description>
+    <DisplayName>oauth1-test_v1</DisplayName>
+    <LastModifiedAt>1606251476733</LastModifiedAt>
+    <LastModifiedBy>cqaap5t</LastModifiedBy>
+    <ManifestVersion>SHA-512:db5feab8b0832235064fe5307c11ffe6369ebbcebcd450b5aea1f77f299752d961b971f7dac9d8b5b6db3b3d652ec07c7c30d27a729eda998fbdaf6cac315511</ManifestVersion>
+    <Policies>
+        <Policy>AssignMessageResourceList</Policy>
+        <Policy>FlowCalloutCheckUnknownResource</Policy>
+        <Policy>FlowCalloutDefaultFaultRule</Policy>
+        <Policy>FlowCalloutJWTSecurity</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources/>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints/>
+</APIProxy>

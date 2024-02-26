@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Manifest name="manifest">
+    <Policies>
+        <VersionInfo resourceName="AssignMessageResourceList" version="SHA-512:0c9995ba8d48f8ab0a1f04096293ecdce1140ad376007a7daca557a1f781fde9d6352cd176f1626dd38cb3b459569c1426232258765ec43c62ffa06e1526411d"/>
+        <VersionInfo resourceName="FlowCalloutCheckUnknownResource" version="SHA-512:554e0a11792163247020b55b72a5a4f9190af6b23271225c66cab22947eef0e4d15ea780d665361c86f461d9ed322910ac0eff500643c8121fe49d558d4304d5"/>
+        <VersionInfo resourceName="FlowCalloutDefaultFaultRule" version="SHA-512:62e9c4c482ef527a9281fc5cf5b3478f912cd488d5db6e6fc9e9d6707b041a6e148174ab2144a7ea0de43e94b057db0356526e0f5edd73715ef3b8b636a7a5b2"/>
+        <VersionInfo resourceName="FlowCalloutJWTSecurity" version="SHA-512:85095345bed14b7d5ce6766dd6a1c6f91a07765d5d57e25a31c62ca25fe13f15e5924a6c775181f658164b0419ee1185d710f3c23f71e0a80998cb3a943b4c24"/>
+    </Policies>
+    <ProxyEndpoints>
+        <VersionInfo resourceName="default" version="SHA-512:d0c40d9f11a2dae17e037749207525af2f2408f370c023f9b42046b8fed733e35b3d21c43cd447b2a7befe727ec29d2be7cf4a34df02b336d9e20dc1d32b4d07"/>
+    </ProxyEndpoints>
+    <Resources/>
+    <SharedFlows/>
+    <TargetEndpoints/>
+</Manifest>

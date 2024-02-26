@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false"
+	enabled="true" name="AssignMessageResourceList">
+	<DisplayName>AssignMessage.ResourceList</DisplayName>
+	<Properties />
+		<AssignVariable>
+        <Name>apiResourceList</Name>
+        <Value>
+        	[ {
+  "url" : "**",
+  "verbList" : [ "GET", "POST", "DELETE", "PUT", "PATCH" ]
+} ]
+        </Value>
+    </AssignVariable>
+<IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+	<AssignTo createNew="false" transport="http" type="request" />
+</AssignMessage>

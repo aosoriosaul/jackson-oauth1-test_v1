@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+    <Description/>
+    <DefaultFaultRule name="default-rule">
+        <AlwaysEnforce>true</AlwaysEnforce>
+    </DefaultFaultRule>
+    <PreFlow name="PreFlow">
+        <Request>
+        </Request>
+        <Response/>
+    </PreFlow>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response/>
+    </PostFlow>
+    <Flows>
+        <Flow name="health">
+            <Description>health check operation</Description>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/health/*") and ((request.verb = "GET") or (request.verb = "HEAD"))</Condition>
+        </Flow>
+        <Flow name="unknown-resource">
+            <Description>unknown-resource</Description>
+            <Request>
+                <Step>
+                    <Name>AssignMessageResourceList</Name>
+                </Step>
+            </Request>
+            <Response/>
+        </Flow>
+    </Flows>
+    <HTTPProxyConnection>
+        <BasePath>/oauth1/v1</BasePath>
+        <Properties/>
+        <VirtualHost>secure</VirtualHost>
+    </HTTPProxyConnection>
+    <RouteRule name="health-check">
+        <Condition>(proxy.pathsuffix MatchesPath "/health/*") and ((request.verb = "GET") or (request.verb = "HEAD"))</Condition>
+    </RouteRule>
+    <RouteRule name="default">
+    </RouteRule>
+</ProxyEndpoint>
