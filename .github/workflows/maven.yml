@@ -28,6 +28,6 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Setting Variables
-      run: APIGEE_X_ENV=prod-env / APIGEE_X_ORG=prod-apigee-svc-3qph / TOKEN=$(gcloud auth print-access-token)
+      run:  APIGEE_X_ENV=prod-env APIGEE_X_ORG=prod-apigee-svc-3qph TOKEN=$(gcloud auth print-access-token)
     - name: Build with Maven
       run: mvn clean install -Dbearer=$TOKEN -Denv=$APIGEE_X_ENV -Dorg=$APIGEE_X_ORG -Pgoogleapi --file oauth1-test_v1/pom.xml
