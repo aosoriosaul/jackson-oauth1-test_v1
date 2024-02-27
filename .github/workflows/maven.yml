@@ -30,4 +30,4 @@ jobs:
     - name: Installing Mojo
       run: sudo apt install -y libedit2
     - name: Build with Maven
-      run: mvn clean install -Dusername=aosoriosaul@hotmail.com -Dpassword=G@rf13ld1216 -Dorg=aosoriosaul-eval -Ptest --file pom.xml
+      run: mvn clean install -Dbearer=$(gcloud auth print-access-token) -Denv=prod-env -Dorg=prod-apigee-svc-3qph -Ptest --file pom.xml
