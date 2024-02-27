@@ -14,8 +14,8 @@ on:
   pull_request:
     branches: [ "main" ]
 env:  |
-  APIGEE_X_ENV:  prod-env 
-  APIGEE_X_ORG:  prod-apigee-svc-3qph
+  APIGEE_X_ENV:  "prod-env" 
+  APIGEE_X_ORG:  "prod-apigee-svc-3qph"
   TOKEN:  $(gcloud auth print-access-token)
 jobs:
   build:
