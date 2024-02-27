@@ -113,13 +113,13 @@
                         </goals>
                     </execution>
                     <!--deploy bundle -->
-                    <!--<execution>
+                    <execution>
                         <id>deploy-bundle-step</id>
                         <phase>install</phase>
                         <goals>
                             <goal>deploy</goal>
                         </goals>
-                    </execution>-->
+                    </execution>
                 </executions>
             </plugin>
         </plugins>
