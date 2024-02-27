@@ -16,7 +16,7 @@ on:
 env:
   APIGEE_X_ENV:  "prod-env" 
   APIGEE_X_ORG:  "prod-apigee-svc-3qph"
-  #TOKEN:  $(gcloud auth print-access-token)
+  TOKEN:  "ya29.a0AfB_byAI9j-b828xNQIKNRccys3o8jrF7DclhgBj1ECDkpxIU-n7477PJrk0ZfaUAdl0hny78FVJFwLtPxyYpLBmabkby8jv4yVtyyRx9D8H86uMOYUbJULAO0W9CFNcXYHI0NrZ-dIzb3UxCpDwUq5TDyxCoEIisEHRsZi5xV_QfkvcdlYiTvqME3lgGu_BIOim6AzFd32M-kV4x_stjOEi-5GVgDqUrKuoHRn7m_O-ryadAHLPHMXOMEgui19gl0L-00DVsBcUL485TzA4UmQORPtunqFRhiGUeEl_3Hibtx-1csQDyPc6Wr9QOA2CH5VKkRtglvS6fChbzAUG_w1Qoa_z80jT702IZSZANgL6VcTqvPKTNxFI2YCA3ngovsF1fuyEwma6FsyS6zDUJKU-DgaCgYKARYSARESFQHGX2MiC4T_s_y5lBwkcgml404bOA0417"
 jobs:
   build:
 
@@ -30,7 +30,5 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: maven
-    - name: Authenticate gcp
-      run: TOKEN= gcloud auth print-access-token
     - name: Build with Maven
-      run: mvn clean install -Dbearer=ya29.a0AfB_byAI9j-b828xNQIKNRccys3o8jrF7DclhgBj1ECDkpxIU-n7477PJrk0ZfaUAdl0hny78FVJFwLtPxyYpLBmabkby8jv4yVtyyRx9D8H86uMOYUbJULAO0W9CFNcXYHI0NrZ-dIzb3UxCpDwUq5TDyxCoEIisEHRsZi5xV_QfkvcdlYiTvqME3lgGu_BIOim6AzFd32M-kV4x_stjOEi-5GVgDqUrKuoHRn7m_O-ryadAHLPHMXOMEgui19gl0L-00DVsBcUL485TzA4UmQORPtunqFRhiGUeEl_3Hibtx-1csQDyPc6Wr9QOA2CH5VKkRtglvS6fChbzAUG_w1Qoa_z80jT702IZSZANgL6VcTqvPKTNxFI2YCA3ngovsF1fuyEwma6FsyS6zDUJKU-DgaCgYKARYSARESFQHGX2MiC4T_s_y5lBwkcgml404bOA0417 -Denv=${{ env.APIGEE_X_ENV }} -Dorg=${{ env.APIGEE_X_ORG }} -Pgoogleapi --file oauth1-test_v1/pom.xml
+      run: mvn clean install -Dbearer=$TOKEN -Denv=${{ env.APIGEE_X_ENV }} -Dorg=${{ env.APIGEE_X_ORG }} -Pgoogleapi --file oauth1-test_v1/pom.xml
